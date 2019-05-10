@@ -1,0 +1,39 @@
+.message {
+    border-radius: 50px;
+    margin: 0 15px 10px;
+    padding: 10px 10px;
+    position: relative;
+    font-weight: bold;
+    height: 100%;
+    width: 20%;
+}
+.message.to {
+    background-color: burlywood;
+    color: #fff;
+    margin-left: 100px;
+    text-align: right;
+    padding: 10px 10px;
+}
+.message.from {
+    background-color: #E5E4E9;
+    color: #363636;
+    margin-right: 100px;
+
+}
+.message.to + .message.to,
+.message.from + .message.from {
+margin-top: -10px;
+}
+input{
+width:300px;
+}
+.container{
+    margin-left: 700px;
+    border:5px solid burlywood;
+    width: 50%;
+
+}
+button {
+    color:white;
+    background-color: black;
+}

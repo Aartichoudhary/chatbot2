@@ -1,0 +1,25 @@
+<p><button kendoButton *ngIf="!opened" (click)="openClose(true)">Open</button></p>
+<p>The state of the Window is <b>{{windowState}}</b></p>
+<kendo-window [top]="100" [left]="50" title="Change my state" [(state)]="windowState" *ngIf="opened" (close)="openClose(false)">
+<div class="container">
+
+<h1>Vpod bot</h1>
+
+<ng-container *ngFor="let message of messages | async">
+
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+
+</ng-container>
+
+
+<label for="nameField">Your Message</label>
+
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+
+<button (click)="sendMessage()">Send</button>
+</div>
+</kendo-window>
